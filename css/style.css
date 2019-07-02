@@ -1,0 +1,94 @@
+/* var */
+html {
+    --light-color: #f4f4f4;
+    --dark-color: #333;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* base styles */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+/* Landing */
+#landing {
+    background: url("/img/bg/gallery.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--dark-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#landing-title {
+    margin-top: 30vh;
+    font-size: 3rem;
+    letter-spacing: 8px;
+    border: 3px solid var(--dark-color);
+    padding: 0.5rem 1rem;
+}
+
+/* gallery */
+.page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.pg-2 {
+    justify-content: flex-end;
+}
+
+.page .page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    background: #282e34dd;
+    color: #ddd;
+    width: 30%;
+    margin: 0 5rem;
+}
+
+.page-content h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.page-content p {
+    font-size: 1.2rem;
+}
+
+.pg-1 {
+    background: url("/img/bg/photography.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+.pg-2 {
+    background: url("/img/bg/paints.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+}
+
+.pg-3 {
+    background: url("/img/bg/sketch.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+}
