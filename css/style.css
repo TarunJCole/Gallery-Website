@@ -35,15 +35,15 @@ body {
 #landing-title {
     margin-top: 30vh;
     font-size: 3rem;
-    letter-spacing: 8px;
+    letter-spacing: 4px;
     border: 3px solid var(--dark-color);
     padding: 0.5rem 1rem;
 }
 
 /* gallery */
 .page {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -124,6 +124,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #f4f4f455;
 }
 
 /* hamburger */
@@ -193,13 +194,13 @@ body {
 
 #menu-wrapper .menu > div {
     background: #282e34aa;
-    width: 100vw;
-    height: 100vh;
+    width: 150vw;
+    height: 150vh;
     display: flex;
     flex: none;
     align-items: center;
     justify-content: center;
-    transform: translate(-100vw);
+    transform: translate(-150vw);
     transition: all 0.5s ease;
 }
 
@@ -220,4 +221,10 @@ body {
     color: white;
     text-decoration: none;
     transition: color 0.5s ease;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.5s ease;
+}
+
+#menu-wrapper .menu > div > div > ul li a:hover {
+    border-color: white;
 }

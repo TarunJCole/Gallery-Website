@@ -1,0 +1,19 @@
+@media (max-width: 950px) {
+    .page {
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .page .page-content {
+        width: 90%;
+        margin: 1rem 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .page .page-content {
+        box-sizing: border-box;
+        margin: 1.5rem 0.5rem;
+        padding: 1.5rem;
+    }
+}
