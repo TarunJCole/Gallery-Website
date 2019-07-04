@@ -92,3 +92,132 @@ body {
     background-attachment: fixed;
     display: flex;
 }
+
+/* menu */
+#menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#menu-wrapper .menu-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 1rem;
+    opacity: 0;
+}
+
+#menu-wrapper .menu-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* hamburger */
+#menu-wrapper .menu-icon > div {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+}
+
+#menu-wrapper .menu-icon > div:before,
+#menu-wrapper .menu-icon > div:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: black;
+}
+
+#menu-wrapper .menu-icon > div:after {
+    top: 20px;
+}
+
+/* hamburger animation */
+#menu-wrapper .menu-toggle:checked + .menu-icon > div {
+    transform: rotate(135deg);
+    background: white;
+}
+
+#menu-wrapper .menu-toggle:checked + .menu-icon > div:before,
+#menu-wrapper .menu-toggle:checked + .menu-icon > div:after {
+    top: 0;
+    transform: rotate(90deg);
+    background: white;
+}
+
+/* show menu on click */
+#menu-wrapper .menu-toggle:checked ~ .menu {
+    visibility: visible;
+}
+
+#menu-wrapper .menu-toggle:checked ~ .menu > div {
+    transform: translate(0);
+}
+
+/* menu items */
+#menu-wrapper .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-wrapper .menu > div {
+    background: #282e34aa;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-100vw);
+    transition: all 0.5s ease;
+}
+
+#menu-wrapper .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+}
+
+#menu-wrapper .menu > div > div > ul li {
+    list-style: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+#menu-wrapper .menu > div > div > ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
